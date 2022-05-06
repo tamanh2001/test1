@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tam Anh</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .box {
+            width: 50%;
+            height: 100px;
+            background-color: rgb(185, 61, 61);
+        }
+        
+        h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 40px;
+            color: aquamarine;
+        }
+        
+        .box::after {
+            content: attr(data-title);
+        }
+        
+        a::after {
+            content: " (" attr(href) ") ";
+        }
+    </style>
+
+    <body>
+        <div class="box" data-title="đây là một cái hộp "></div>
+        <a href="http://fullstack.edu.com.vn">Học HTML</a>
+
+
+        <div>
+            <h1>CONSIDER</h1>
+        </div>
+    </body>
+</head>
+
+</html>

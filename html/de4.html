@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen'>
+    <style>
+        .image {
+            margin: 300px;
+        }
+        
+        .image img {
+            width: 600px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image">
+        <img id="img" src="img/ảnh1.jpeg" alt="">
+
+        <br/>
+        <button id="prev" onclick="onclickImage('pre')" type="button">PRE</button>
+        <button id="btn2" onclick="onclickImage('stop')" type="button">STOP</button>
+        <button id="btn3" onclick="onclickImage('')" type="button">START</button>
+        <button id="next" onclick="onclickImage('next')" type="button">NEXT</button>
+    </div>
+    <script>
+        var index = 0;
+        let eve = '';
+        onclickImage = function(e) {
+
+            if (index > 4) {
+                index = 0;
+            } else if (e === 'pre') {
+                if (index === 0) {
+                    index = 0;
+                } else {
+                    index = index - 1;
+                }
+            } else if (e === 'next') {
+                if (index > 4) {
+                    index = 0;
+                } else {
+                    index++;
+                }
+
+            }
+            eve = e;
+            var imgs = ["img/ảnh1.jpeg", "img/ảnh2.jpeg", "img/ảnh3.jpeg", "img/ảnh4.jpeg", "img/ảnh5.jpeg"];
+            document.getElementById('img').src = imgs[index];
+            console.log(eve)
+        }
+
+        function onChangeImage() {
+            index++;
+            if (index > 4) {
+                index = 0;
+            }
+            var imgs = ["img/ảnh1.jpeg", "img/ảnh2.jpeg", "img/ảnh3.jpeg", "img/ảnh4.jpeg", "img/ảnh5.jpeg"];
+            document.getElementById('img').src = imgs[index];
+        }
+        if (eve != '') {
+
+        } else {
+            setInterval(onChangeImage, 1500);
+        }
+    </script>
+
+</body>
+
+</html>

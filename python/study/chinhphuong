@@ -1,0 +1,6 @@
+import math
+n=int(input("nhap so:"))
+for i in range(1,n+1):
+   if i=(const)*(const):
+   c=i
+   print(c)

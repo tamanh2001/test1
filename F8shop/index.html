@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>F8Shop</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <style>
+        h1#headingid.headingclass {
+            color: violet;
+        }
+        
+        #headingid.headingclass {
+            color: red;
+        }
+        
+        .headingclass {
+            color: pink !important; <!-- thêm !important là đặc biệt ưu tiên-->
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 id="headingid" class="headingclass">WOWOWOWOW</h1>
+
+        <ol>
+            <li>Internal,External?</li>
+            <li>Inline-1000</li>
+            <li>#id-100</li>
+            <li>.class-10</div>
+    <li>tag-1</li>
+    <li> Equal specificity?</li>
+    <!-- sự giống nhau khi gọi tới 1 cái element (selector í)
+    tức là khi gọi 2 hàm h1 đều là id giống nhau nhưng khác màu, 
+    thì cái nào được gọi sau thì sẽ được thực hiện trước
+    nếu select đến #headingid.headingclass tức là gọi tới 1 cái element 
+    có cả id và class, 
+    số điểm được tính là 100+10=110 
+    tag là dạng h1{}-->
+    <li> Universal selector and inherited</li>
+    <!--điểm được tính =0-->
+    </ol>
+
+    </div>
+</body>
+
+</html>

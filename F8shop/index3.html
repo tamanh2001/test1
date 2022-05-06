@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .box {
+            width: 60px;
+            height: 60px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            float: left;
+            <!--dùng để sắp xếp box theo chiều từ trái sang phải-->
+        }
+        
+        .box1 {
+            background-color: blue;
+            padding: 10px;
+            border: 10px;
+            border-style: groove;
+            border-color: teal;
+            <!--solid là kiểu nét liền,
+            inherit,
+            initial: kiểu ban đầu, none là hủy đều ko phải kiểu border--> <!-- nếu chỉ muốn tăng border 1 phía thì phải set các bên còn lại bằng 0 vì nếu không solid sẽ tự động đặt các bên còn lại là 2px-->
+        }
+        
+        .box2 {
+            background-color: violet;
+            /* khi thay đổi margin kích thước box không thay đổi vì margin không phải lớp bao bọc, mà chỉ dùng để tạo khoảng lề*/
+            margin-left: 20px;
+            margin-right: 330px;
+            <!-- khi margin quá khoảng trống của trình duyệt thì box 3 sẽ bị đẩy xuống dưới-->
+        }
+        
+        .box3 {
+            background-color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1">BOX 1</div>
+    <div class="box box2">BOX 2</div>
+    <div class="box box3">BOX 3</div>
+</body>
+
+</html>
+<!-- các lớp margin ngoài cùng ko đc tính kích thước của box, mà chỉ bắt đầu từ lớp border->lớp padding->kích thước ban đầu của box -->
